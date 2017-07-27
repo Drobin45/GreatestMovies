@@ -13,7 +13,9 @@ namespace GreatestMovies.Models
         [Key]
         public int MovieID { get; set; }
         public string Title { get; set; }
+        [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
+        [Display(Name = "Box Office Gross")]
         public int BoxOfficeGross { get; set; }
 
         [ForeignKey("Genre")]

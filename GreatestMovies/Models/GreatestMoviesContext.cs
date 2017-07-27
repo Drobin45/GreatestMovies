@@ -24,5 +24,12 @@ namespace GreatestMovies.Models
         public System.Data.Entity.DbSet<GreatestMovies.Models.Genre> Genres { get; set; }
 
         public System.Data.Entity.DbSet<GreatestMovies.Models.Actor> Actors { get; set; }
+
+
+        // This aids in creating many to many relationships. Establishes a "join table".
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

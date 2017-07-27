@@ -9,43 +9,30 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ActorName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DOB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ActorName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DOB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nationality)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gender)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ActorID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ActorID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ActorID })
-        </td>
-    </tr>
-}
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 colBorder">
+                <h1>
+                   @Html.DisplayFor(modelItem => item.ActorName)
+                </h1>
+                <h4>
+                   DoB: @item.DOB.ToShortDateString()             
+                </h4>
+                <h4>
+                   Nationality:  @Html.DisplayFor(modelItem => item.Nationality)
+                </h4>
+                <h4>
+                   Gender: @Html.DisplayFor(modelItem => item.Gender)
+                </h4>
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ActorID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ActorID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ActorID })
+                </p>
+            </div>
+        }
+        </div>
 
-</table>
+

@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('../Images/movie_reel_projector_wallpaper_free_hd.jpg');
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,12 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+.colBorder{
+    border: 2px solid black;
+    background-color: white;
+}
+
+.table.whiteBackground{
+    background-color: white;
 }
